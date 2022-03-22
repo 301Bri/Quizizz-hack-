@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<title>Save Web Form Data to Spreadsheets</title>
 	<script
 		src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -12,7 +12,12 @@
 				url:"https://api.apispreadsheets.com/data/qVuTxEnmUxz6MIFp/",
 				type:"post",
 				data:$("#myForm").serializeArray(),
-alert('It will be there in a few weeks!')
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
 			});
 		}
 	</script>
